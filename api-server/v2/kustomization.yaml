@@ -1,0 +1,9 @@
+commonLabels:
+  manifest-version: app-server/v2
+  role: app-server
+
+resources:
+- service.yaml
+- ingress.yaml
+- deployment.yaml
+- hpa.yaml

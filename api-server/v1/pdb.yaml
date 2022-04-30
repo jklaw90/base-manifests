@@ -1,0 +1,12 @@
+apiVersion: policy/v1
+kind: PodDisruptionBudget
+metadata:
+  labels:
+    role: app-server
+  name: truth-service-app-server
+  namespace: truth-service
+spec:
+  maxUnavailable: 20%
+  selector:
+    matchLabels:
+      role: app-server

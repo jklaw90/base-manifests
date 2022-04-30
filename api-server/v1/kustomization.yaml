@@ -1,0 +1,21 @@
+labels:
+  - pairs:
+      role: app-server
+
+commonAnnotations:
+  manifest-version: app-server/v1
+
+resources:
+- service.yaml
+- ingress.yaml
+- deployment.yaml
+
+configurations:
+- config.yaml
+
+vars:
+- name: SERVICE_NAME
+  objref:
+    kind: Service
+    name: app-server-service
+    apiVersion: v1
