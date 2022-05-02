@@ -3,8 +3,7 @@ kind: PodDisruptionBudget
 metadata:
   labels:
     role: app-server
-  name: truth-service-app-server
-  namespace: truth-service
+  name: app-server
 spec:
   maxUnavailable: 20%
   selector:

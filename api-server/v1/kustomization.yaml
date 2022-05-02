@@ -9,6 +9,7 @@ resources:
 - service.yaml
 - ingress.yaml
 - deployment.yaml
+- pdb.yaml
 
 configurations:
 - config.yaml
