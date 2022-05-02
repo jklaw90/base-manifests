@@ -1,9 +1,22 @@
-commonLabels:
+labels:
+  - pairs:
+      role: app-server
+
+commonAnnotations:
   manifest-version: app-server/v2
-  role: app-server
 
 resources:
 - service.yaml
-- ingress.yaml
 - deployment.yaml
+- pdb.yaml
 - hpa.yaml
+
+configurations:
+- config.yaml
+
+vars:
+- name: SERVICE_NAME
+  objref:
+    kind: Service
+    name: app-server-service
+    apiVersion: v1

@@ -1,0 +1,15 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app-server-deployment
+  labels:
+    sidecar.istio.io/inject: "true"
+  annotations:
+    sidecar.istio.io/inject: "true"
+spec:
+  template:
+    metadata:
+      labels:
+        sidecar.istio.io/inject: "true"
+      annotations:
+        sidecar.istio.io/inject: "true"

@@ -1,0 +1,4 @@
+# not important, this just lets us update the service within the paths
+varReference:
+- path: spec/rules/http/paths/backend/service/name
+  kind: Ingress

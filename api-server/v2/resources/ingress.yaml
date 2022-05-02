@@ -1,13 +1,9 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: release-name-app-server
+  name: app-server-ingress
   labels:
-    app.kubernetes.io/name: app-server
-    app.kubernetes.io/instance: release-name
-    app.kubernetes.io/version: "1.16.0"
-  annotations:
-    kubernetes.io/ingress.class: nginx
+    role: app-server
 spec:
   ingressClassName: nginx
   rules:
@@ -18,6 +14,6 @@ spec:
             pathType: Prefix
             backend:
               service:
-                name: release-name-app-server
+                name: $(SERVICE_NAME)
                 port:
                   number: 80
